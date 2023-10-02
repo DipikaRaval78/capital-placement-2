@@ -1,100 +1,11 @@
 import React from 'react';
 import {DownOutlined} from  "@ant-design/icons"
-import { Input ,Space, Table, Tag} from 'antd';
 import {Chart} from "./Charts"
-// import type { SearchProps } from '../';
+import { Icon } from '@iconify/react';
+import {TotalCandidateTable} from "./TotalCandidateTable";
+import {Opportunitytable} from "./OpportunityTable";
 
 const  Opportunityoverview =() => {
-    const { Search } = Input;
-    const columns = [
-        {
-          title: 'Opportunity Name',
-          dataIndex: 'opportunityname',
-          key: 'opportunityname',
-        //   render: (text1) => <a>{text1}</a>,
-        },
-        {
-          title: 'Status',
-          dataIndex: 'status',
-          key: 'status',
-        },
-        {
-          title: 'Applied',
-          dataIndex: 'applied',
-          key: 'applied',
-        },
-        {
-          title: 'Recommended',
-          key: 'recommended',
-          dataIndex: 'recommended',
-        //   render: (_, { tags }) => (
-        //     <>
-        //       {tags.map((tag) => {
-        //         let color = tag.length > 5 ? 'geekblue' : 'green';
-        //         if (tag === 'loser') {
-        //           color = 'volcano';
-        //         }
-        //         return (
-        //           <Tag color={color} key={tag}>
-        //             {tag.toUpperCase()}
-        //           </Tag>
-        //         );
-        //       })}
-        //     </>
-        //   ),
-        },
-        {
-          title: 'Interview',
-          key: 'interview',
-          dataIndex: 'interview',
-
-        //   render: (_, record) => (
-        //     <Space size="middle">
-        //       <a>Invite {record.name}</a>
-        //       <a>Delete</a>
-        //     </Space>
-        //   ),
-        },
-        {
-            title: 'Offer',
-            key : 'offer',
-          dataIndex: 'offer',
-
-        },{
-            title: 'Hired',
-            key : 'hired',
-          dataIndex: 'hired',
-        }
-      ];
-      const data = [
-        {
-          key: '1',
-          opportunityname: 'John Brown',
-          status: 32,
-          applied: 'New York No. 1 Lake Park',
-          recomended: ['nice', 'developer'],
-          interview: "hhh",
-          offer:'',
-          hired:'jjj',
-        },
-        {
-            key: '1',
-            opportunityname: 'John Brown',
-            status: 32,
-            applied: 'New York No. 1 Lake Park',
-            recomended: ['nice', 'developer'],
-            interview: "hhh",
-            offer:'',
-            hired:'jjj',
-        },
-        {
-          key: '3',
-          name: 'Joe Black',
-          age: 32,
-          address: 'Sydney No. 1 Lake Park',
-          tags: ['cool', 'teacher'],
-        },
-      ];
 
   return (
     <div >
@@ -148,7 +59,7 @@ const  Opportunityoverview =() => {
       </div>
     </div> */}
 
-<div className="main-report grid gap-8 ">
+<div className="main-report grid gap-8 container m-auto grid grid-cols-3 grid-rows-3 md:grid-cols-5 lg:grid-cols-4 gap-4">
 <div className="grid lg:col-start-1 lg:col-span-1">
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
@@ -162,14 +73,21 @@ const  Opportunityoverview =() => {
             </span>
         </div>
         <div className="flex items-center justify-between pb-4  px-8">
-            <span className="">
+            <span>
                 Previous Period
             </span>
         </div>
-        <div className="flex items-center justify-between  px-8">
-            <span className="">
+        <div className="flex items-center px-8">
+            <span className="text-base pr-2.5">
                1592
             </span>
+            <div className="flex items-center rounded-lg px-2" style={{backgroundColor:"rgba(240, 246, 255, 1)"}}>
+            <span className="">
+            <Icon className="text-xl " icon="ant-design:rise-outlined"/>
+            
+            </span>
+            <div className="text-sm pl-1 items-center">15%</div>
+            </div>
         </div>
     </div>
 
@@ -178,12 +96,12 @@ const  Opportunityoverview =() => {
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                Applied
+                Offer
             </span>
         </div>
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                3,122
+                183
             </span>
         </div>
         <div className="flex items-center justify-between pb-4  px-8">
@@ -191,10 +109,17 @@ const  Opportunityoverview =() => {
                 Previous Period
             </span>
         </div>
-        <div className="flex items-center justify-between  px-8">
-            <span className="">
-               1592
+        <div className="flex items-center px-8">
+            <span className="text-base pr-2.5">
+               71
             </span>
+            <div className="flex items-center rounded-lg px-2" style={{backgroundColor:"rgba(240, 246, 255, 1)"}}>
+            <span className="">
+            <Icon className="text-xl " icon="ant-design:rise-outlined"/>
+            
+            </span>
+            <div className="text-sm pl-1 items-center">15%</div>
+            </div>
         </div>
     </div>
 
@@ -203,12 +128,12 @@ const  Opportunityoverview =() => {
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                Applied
+                Hired
             </span>
         </div>
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                3,122
+                98
             </span>
         </div>
         <div className="flex items-center justify-between pb-4  px-8">
@@ -216,24 +141,31 @@ const  Opportunityoverview =() => {
                 Previous Period
             </span>
         </div>
-        <div className="flex items-center justify-between  px-8">
-            <span className="">
-               1592
+        <div className="flex items-center px-8">
+            <span className="text-base pr-2.5">
+               167
             </span>
+            <div className="flex items-center rounded-lg px-2" style={{backgroundColor:"rgba(255, 243, 240, 1)"}}>
+            <span className="">
+            <Icon className="text-xl " icon="ant-design:fall-outlined"/>
+            
+            </span>
+            <div className="text-sm pl-1 items-center">15%</div>
+            </div>
         </div>
     </div>
 
 </div> 
-<div className="grid lg:col-start-4 lg:col-span-8 row-start-1 row-end-5">
+<div className="grid lg:col-start-4 lg:col-span-6 row-start-1 row-end-3">
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                Applied
+                Total Candidate Flow
             </span>
         </div>
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                3,122
+                4567
             </span>
         </div>
         <div className="flex items-center justify-between pb-4  px-8">
@@ -242,26 +174,30 @@ const  Opportunityoverview =() => {
             </span>
         </div>
         <div className="flex items-center justify-between  px-8">
-            <span className="">
-               1592
-            </span>
+           <TotalCandidateTable/> 
         </div>
     </div>
 
 </div>  
-<div className="grid row-start-2 row-end-7 col-span-1 md:col-span-2 lg:col-span-3">
+<div className="grid row-start-2 row-end-4 col-span-1 md:col-span-2 lg:col-span-3">
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
+            <button
+          type="button"
+          className="ant-btn css-pr0fja ant-btn-default ant-btn-lg ant-btn-compact-item ant-btn-compact-first-item"
+        >
+          <span>Recommended</span>
+        </button>
+        <DownOutlined />
+            </span>
+        </div>
+        <div className="flex items-center justify-between pb-5 px-8">
+            
                 <Chart/>
-            </span>
+           
         </div>
-        <div className="flex items-center justify-between pb-5 px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-        <div className="flex items-center justify-between pb-4  px-8">
+        {/* <div className="flex items-center justify-between pb-4  px-8">
             <span className="">
                 Previous Period
             </span>
@@ -270,56 +206,68 @@ const  Opportunityoverview =() => {
             <span className="">
                1592
             </span>
-        </div>
+        </div> */}
     </div>
 
 </div> 
-<div className="grid row-start-5 row-end-7 col-span-4 md:col-span-2 lg:col-span-4">
+<div className="grid row-start-3 row-end-4 col-span-2 md:col-span-2  lg:col-span-2">
     <div className="bg-white rounded-3xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                Applied
+                Recommended
             </span>
-        </div>
-        <div className="flex items-center justify-between pb-5 px-8">
+            <div className="flex items-center justify-between">
             <span className="font-bold">
                 3,122
             </span>
         </div>
-        <div className="flex items-center justify-between pb-4  px-8">
+        </div>
+       
+        <div className="flex items-center justify-between pb-16 px-8">
             <span className="">
                 Previous Period
             </span>
         </div>
-        <div className="flex items-center justify-between  px-8">
+        <div className="flex items-center px-8">
+        <span>93</span>
+  
+        <div className="flex items-center rounded-lg px-2" style={{backgroundColor:"rgba(240, 246, 255, 1)"}}>
             <span className="">
-               1592
+            <Icon className="text-xl " icon="ant-design:rise-outlined"/>
+            
             </span>
+            <div className="text-sm pl-1 items-center">15%</div>
+            </div>
         </div>
     </div>
 
 </div> 
-<div className="grid row-start-5 row-end-7 col-span-6  md:col-span-2 lg:col-span-4">
+<div className="grid row-start-3 row-end-4 col-span-2  md:col-span-2  lg:col-span-2">
     <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-between pb-5 px-8">
+    <div className="flex items-center justify-between pb-5 px-8">
             <span className="font-bold">
-                Applied
+                Interview
+            </span>
+            <div className="flex items-center justify-between">
+            <span className="font-bold">
+              443
             </span>
         </div>
-        <div className="flex items-center justify-between pb-5 px-8">
-            <span className="font-bold">
-                3,122
-            </span>
         </div>
-        <div className="flex items-center justify-between pb-4  px-8">
+        <div className="flex items-center justify-between pb-16  px-8">
             <span className="">
                 Previous Period
             </span>
         </div>
-        <div className="flex items-center justify-between  px-8">
+        <div className="flex items-center  px-8">
+            <span>93</span>
+        <div className="flex items-center rounded-lg px-2" style={{backgroundColor:"rgba(240, 246, 255, 1)"}}>
             <span className="">
-               1592
+            <Icon className="text-xl " icon="ant-design:rise-outlined"/>
+            
             </span>
+            <div className="text-sm pl-1 items-center">15%</div>
+            </div>
         </div>
     </div>
 
@@ -327,128 +275,8 @@ const  Opportunityoverview =() => {
 
 
 </div>
-<div className="flex-row w-full flex my-9">
-  <div className="w-1/2">
-    {/* <p className="text-blue text-xl font-bold">Opportunity Overview</p> */}
-    <Search placeholder="input search text" style={{backgroundColor:"#1677ff"}} enterButton />
-  </div>
-  <div className="flex w-1/2 justify-between gap-4">
-   
-    <div className="flex gap-4 flex-col items-end w-full">
-      
-      <div className="text-blue-50 text-sm w-80 bg-white ant-space-compact css-pr0fja ant-space-compact-block ant-dropdown-button css-pr0fja">
-      
-      <button className="text-sm w-80 bg-transparent bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-      Export All As CSV
-</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="grid bg-white bg-white rounded-3xl border-solid border py-6 px-8">
-    <div className="grid gap-x-9">
-<div className="grid lg:col-start-1 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center  px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-        
-       
-    </div>
 
-</div>
-<div className="grid lg:col-start-2 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-       
-    </div>
-
-</div>
-<div className="grid lg:col-start-3 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-        
-    </div>
-
-</div>
-<div className="grid lg:col-start-4 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-       
-    </div>
-
-</div>
-<div className="grid lg:col-start-5 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center  px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-        
-    </div>
-
-</div>
-<div className="grid lg:col-start-6 lg:col-span-1 h-5/6">
-    <div className="bg-white rounded-3xl border-solid border py-6">
-        <div className="flex items-center justify-center pb-5 px-8">
-            <span>
-                Applied
-            </span>
-        </div>
-        <div className="flex items-center justify-center px-8">
-            <span className="font-bold">
-                3,122
-            </span>
-        </div>
-       
-    </div>
-
-</div>
-</div>
-<div className="my-9"> 
-<Table columns={columns} dataSource={data} />
-</div>
-</div>  
+ <Opportunitytable/>
     </div>
   );
 }

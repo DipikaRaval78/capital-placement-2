@@ -28,10 +28,7 @@ export const options = {
     legend: {
       position: 'top' as const,
     },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
+   
   },
 };
 
@@ -41,20 +38,20 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      label: 'Qualified',
+      data: labels.map(() => faker.datatype.number({ min: 250, max: 750 })),
+      borderColor: 'rgba(251, 227, 142, 0.7)',
+      backgroundColor: 'rgba(251, 227, 142, 0.7)',
     },
     {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      label: 'Disqualified',
+      data: labels.map(() => faker.datatype.number({ min: 250, max: 750 })),
+      borderColor: 'rgba(177, 165, 255, 1)',
+      backgroundColor: 'rgba(177, 165, 255, 1)',
     },
   ],
 };
 
 export  const Chart = () => {
-  return <Line options={options} data={data} />;
+  return <Line className="w-full h-full" options={options} data={data} />;
 }

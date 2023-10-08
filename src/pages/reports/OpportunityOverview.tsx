@@ -237,13 +237,13 @@ const  Opportunityoverview =() => {
     <div className="bg-white rounded-xl border-solid border pt-6">
         <div className="flex items-center justify-between pb-4 px-8">
             <span className="text-base font-bold">
-            <button
+            {/* <button
           type="button"
           className="ant-btn css-pr0fja ant-btn-default ant-btn-lg ant-btn-compact-item ant-btn-compact-first-item"
-        >
+        > */}
           <span>Recommended</span>
-        </button>
-        <DownOutlined className='text-sm pl-1'/>
+        {/* </button> */}
+        <DownOutlined className='text-sm pl-1 font-bold'/>
             </span>
         </div>
         <div className="flex items-center justify-between px-8 pb-2">

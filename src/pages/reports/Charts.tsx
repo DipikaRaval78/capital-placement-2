@@ -53,5 +53,5 @@ export const data = {
 };
 
 export  const Chart = () => {
-  return <Line className="w-full h-full" options={options} data={data} />;
+  return <Line   height={40}  width={100} options={options} data={data} />;
 }

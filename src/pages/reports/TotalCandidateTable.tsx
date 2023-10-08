@@ -10,7 +10,7 @@ const Row : React.FC<PropsTable> = ({row}) => {
 
   return (
     <>
-      <tr className="flex flex-row w-full py-1.5" onClick={() => setOpen(open)}>
+      <tr className="flex flex-row w-full py-1.5 text-base font-light" onClick={() => setOpen(open)}>
         <td className="flex w-1/2">{row.Stage}</td>
         <td className="justify-end flex w-1/4">{row.Qualified}</td>
         <td className="justify-end flex w-1/4">{row.Disqualified}</td>
@@ -56,7 +56,7 @@ export const  TotalCandidateTable =() => {
   return (
     
       <table className="w-full flex flex-col">
-        <tr className="flex flex-row w-full py-4">
+        <tr className="flex flex-row w-full py-4 text-base font-medium">
           <th className="flex w-1/2">Stage</th>
           <th className="justify-end flex w-1/4">Qualified</th>
           <th className="justify-end flex w-1/4">Disqualified</th>

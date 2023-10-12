@@ -196,7 +196,7 @@ export  const Opportunitytable = () =>{
 
     return(
         
-        <div>
+        <div className='grid'>
              <div className="mt-6">
     <p className="text-base font-bold">Detailed Opportunity Overview</p>
     </div>

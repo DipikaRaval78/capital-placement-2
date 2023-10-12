@@ -31,10 +31,10 @@ const  Opportunityoverview =() => {
    
     <div className="flex gap-4 flex-col items-end w-full">
       
-      <div className="text-sm font-semibold " >
+      <div className="text-sm font-semibold flex" >
         <button style={{backgroundColor:"#f0f3fb"}}
           type="button"
-          className=" p-2.5 rounded-xl ant-btn css-pr0fja ant-btn-default ant-btn-lg ant-btn-compact-item ant-btn-compact-first-item"
+          className="flex p-2.5 rounded-xl ant-btn css-pr0fja ant-btn-default ant-btn-lg ant-btn-compact-item ant-btn-compact-first-item"
         >
           <span>London Internship Program</span>
          
@@ -106,7 +106,7 @@ const  Opportunityoverview =() => {
     </div> */}
 
 
-<div className="main-report grid container m-auto  grid-cols-4  grid-cols-3 md:grid-cols-8 lg:grid-cols-5">
+<div className="main-report grid container m-auto   md:grid-cols-8 lg:grid-cols-5">
 <div className="grid row-start-1 row-end-2 col-span-1 md:col-span-2 lg:col-span-1   h-fit h-max  h-min  relative">
     <div className="bg-white rounded-xl border-solid border py-6">
         <div className="flex items-center justify-between pb-5 px-8 text-base font-bold tracking-normal">
